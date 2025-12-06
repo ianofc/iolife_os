@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-header" style="margin-top: 20px; margin-bottom: 30px;">
+    <h2 class="page-title" style="font-size: 1.5rem; font-weight: bold; color: #1a1c23; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-grid" style="color: #d4af37;"></i> Menu Geral
+    </h2>
+    <p class="page-subtitle" style="color: #64748b; font-size: 0.9rem;">Todas as dimensões da sua vida.</p>
+</div>
+
+<div class="menu-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+    
+    <a href="{% url 'home' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-house" style="color: #004aad; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Início</span>
+    </a>
+
+    <a href="{% url 'mylife' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-regular fa-heart" style="color: #e11d48; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Vida</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-user-group" style="color: #8a2be2; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Família</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-wand-magic-sparkles" style="color: #d4af37; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Fé</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-briefcase" style="color: #004aad; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Trabalho</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-dumbbell" style="color: #f97316; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Corpo</span>
+    </a>
+
+    <a href="{% url 'mind' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-brain" style="color: #8a2be2; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Mente</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-bullseye" style="color: #d4af37; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Sonhos</span>
+    </a>
+
+    <a href="{% url 'connections' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-hand-holding-heart" style="color: #e11d48; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Conexões</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-camera" style="color: #004aad; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Fotos</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-play" style="color: #8a2be2; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Vídeos</span>
+    </a>
+
+    <a href="#" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-regular fa-newspaper" style="color: #004aad; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Notícias</span>
+    </a>
+
+    <a href="{% url 'games' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-gamepad" style="color: #8a2be2; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Jogos</span>
+    </a>
+
+    <a href="{% url 'marketplace' %}" class="menu-item" style="background: white; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; transition: transform 0.2s;">
+        <i class="fa-solid fa-bag-shopping" style="color: #f97316; font-size: 1.2rem;"></i>
+        <span style="font-weight: 500;">Mercado</span>
+    </a>
+
+</div>
+
+<style>
+    /* Media Query para Desktop (3 colunas) */
+    @media (min-width: 768px) {
+        .menu-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+    .menu-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-color: #004aad !important;
+    }
+</style>
+
+{% endblock %}

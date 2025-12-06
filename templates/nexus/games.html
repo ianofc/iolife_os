@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto pb-20 pt-4">
+    <h1 class="text-2xl font-bold text-io-dark mb-6 flex items-center gap-2">
+        <i data-lucide="gamepad-2" class="w-6 h-6 text-purple-500"></i> Arcade & Evolução
+    </h1>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        
+        <div class="bg-white p-4 rounded-[2rem] shadow-card hover:shadow-xl transition-all cursor-pointer group border border-gray-100">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 mb-4 flex items-center justify-center relative overflow-hidden">
+                <i data-lucide="puzzle" class="w-12 h-12 text-white relative z-10"></i>
+                <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <h3 class="font-bold text-gray-900">Mind Puzzle</h3>
+            <p class="text-xs text-gray-500 mt-1">Treine seu foco</p>
+            <button class="w-full mt-3 py-2 bg-gray-50 text-purple-600 font-bold text-xs rounded-xl group-hover:bg-purple-600 group-hover:text-white transition-colors">Jogar</button>
+        </div>
+
+        <div class="bg-white p-4 rounded-[2rem] shadow-card hover:shadow-xl transition-all cursor-pointer group border border-gray-100">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 mb-4 flex items-center justify-center">
+                <i data-lucide="flame" class="w-12 h-12 text-white"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">Habit Streak</h3>
+            <p class="text-xs text-gray-500 mt-1">Desafio de 30 dias</p>
+            <button class="w-full mt-3 py-2 bg-gray-50 text-orange-600 font-bold text-xs rounded-xl group-hover:bg-orange-500 group-hover:text-white transition-colors">Entrar</button>
+        </div>
+
+        <div class="bg-white p-4 rounded-[2rem] shadow-card hover:shadow-xl transition-all cursor-pointer group border border-gray-100">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-500 mb-4 flex items-center justify-center">
+                <i data-lucide="globe" class="w-12 h-12 text-white"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">Quiz Trivia</h3>
+            <p class="text-xs text-gray-500 mt-1">Conhecimento geral</p>
+            <button class="w-full mt-3 py-2 bg-gray-50 text-blue-600 font-bold text-xs rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-colors">Jogar</button>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

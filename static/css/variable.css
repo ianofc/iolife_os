@@ -1,0 +1,63 @@
+/* ianofc/iolife_os/.../app/static/css/variables.css */
+
+:root {
+    /* --- BASE: O Ambiente Clean --- */
+    --io-bg: #F8FAFC;           /* Slate 50 - Branco Frio e Tecnológico */
+    --io-surface: #FFFFFF;      /* Branco Puro para Cards */
+    --io-text-main: #1E293B;    /* Slate 800 - Leitura perfeita */
+    --io-text-muted: #64748B;   /* Slate 500 - Texto secundário */
+    
+    /* --- A ASSINATURA: Roxo IO --- */
+    /* Substitui o Azul antigo */
+    --io-purple-primary: #6200EA; /* Roxo Vibrante (Botões, Logo, Links) */
+    --io-purple-hover: #4B00B3;   /* Estado Hover */
+    --io-purple-soft: rgba(98, 0, 234, 0.08); /* Fundo de itens ativos */
+    
+    /* --- O REINO: Ouro --- */
+    --io-gold: #FFD700;
+    --io-gold-gradient: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+    
+    /* --- SOMBRAS SUAVES (Glass Clean) --- */
+    --shadow-soft: 0 4px 20px -2px rgba(98, 0, 234, 0.05);
+    --shadow-hover: 0 10px 25px -5px rgba(98, 0, 234, 0.15);
+}
+
+/* Opcional: Dark Mode (preparado para o futuro toggle) */
+body.dark-mode {
+    --io-bg: #0F0518;
+    --io-surface: rgba(30, 10, 50, 0.6);
+    --io-text-main: #FFFFFF;
+    --io-text-muted: #9CA3AF;
+}
+
+body {
+    background-color: var(--io-bg);
+    color: var(--io-text-main);
+    font-family: 'Outfit', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Utilitários de Botão */
+.btn-primary {
+    background-color: var(--io-purple-primary);
+    color: white;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(98, 0, 234, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--io-purple-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(98, 0, 234, 0.3);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-soft);
+}

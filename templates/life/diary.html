@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto pb-20 pt-4">
+    <h1 class="text-2xl font-bold text-io-dark mb-6 flex items-center gap-2">
+        <i data-lucide="book" class="w-6 h-6 text-amber-500"></i> Diário Pessoal
+    </h1>
+
+    <div class="bg-white rounded-[2rem] p-6 shadow-card border border-gray-100">
+        <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-100">
+            <span class="text-sm font-bold text-gray-400">Hoje, Sexta-feira</span>
+            <div class="flex gap-2">
+                <button class="p-2 hover:bg-gray-100 rounded-full text-gray-400 hover:text-io-blue"><i data-lucide="image" class="w-5 h-5"></i></button>
+                <button class="p-2 hover:bg-gray-100 rounded-full text-gray-400 hover:text-io-blue"><i data-lucide="mic" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        
+        <textarea class="w-full h-64 bg-transparent border-none focus:ring-0 text-gray-700 text-lg leading-relaxed placeholder-gray-300 resize-none" placeholder="Querido diário... O que marcou seu dia hoje?"></textarea>
+        
+        <div class="flex justify-end pt-4">
+            <button class="bg-io-gold text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-amber-200 hover:bg-amber-500 transition-all">Salvar Memória</button>
+        </div>
+    </div>
+
+    <div class="mt-8 space-y-4">
+        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider px-2">Registros Anteriores</h3>
+        {% for i in "123" %}
+        <div class="bg-white p-5 rounded-2xl border border-gray-100 hover:border-io-gold/30 transition-colors cursor-pointer group">
+            <div class="flex justify-between mb-2">
+                <span class="text-xs font-bold text-io-blue">Ontem</span>
+                <i data-lucide="lock" class="w-3 h-3 text-gray-300"></i>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-2 group-hover:text-gray-900">Foi um dia incrível. Finalmente consegui terminar aquele projeto que estava me preocupando...</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

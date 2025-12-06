@@ -1,83 +1,183 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
     
     <div class="hidden lg:block lg:col-span-3 space-y-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-            <h3 class="text-io-blue font-bold mb-4">Meus Ambientes</h3>
-            <ul class="space-y-2">
-                <li><a href="#" class="flex items-center gap-3 text-gray-600 hover:text-io-gold font-medium"><span class="w-2 h-2 rounded-full bg-io-gold"></span> Social</a></li>
-                <li><a href="#" class="flex items-center gap-3 text-gray-600 hover:text-io-gold font-medium"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Trabalho</a></li>
-                <li><a href="#" class="flex items-center gap-3 text-gray-600 hover:text-io-gold font-medium"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Fé</a></li>
-                <li><a href="#" class="flex items-center gap-3 text-gray-600 hover:text-io-gold font-medium"><span class="w-2 h-2 rounded-full bg-green-500"></span> Saúde</a></li>
-            </ul>
+        
+        <div class="relative rounded-[2.5rem] overflow-hidden shadow-card h-80 group">
+            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
+            
+            <div class="absolute bottom-0 p-6 w-full text-white">
+                <p class="text-xs font-bold uppercase tracking-wider text-io-gold mb-1">Meu Momento</p>
+                <h2 class="text-2xl font-heading font-bold leading-tight">Focando no essencial.</h2>
+                
+                <div class="flex gap-2 mt-4">
+                    <div class="flex-1 bg-white/20 backdrop-blur-md rounded-xl p-2 text-center border border-white/10">
+                        <i data-lucide="battery" class="w-4 h-4 mx-auto mb-1"></i>
+                        <span class="text-xs font-bold">85%</span>
+                    </div>
+                    <div class="flex-1 bg-white/20 backdrop-blur-md rounded-xl p-2 text-center border border-white/10">
+                        <i data-lucide="moon" class="w-4 h-4 mx-auto mb-1"></i>
+                        <span class="text-xs font-bold">7h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+            <button class="glass p-4 rounded-[1.5rem] text-left hover:bg-white transition-colors group">
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-2 text-io-blue group-hover:scale-110 transition-transform"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
+                <span class="text-sm font-bold text-gray-700">Trabalho</span>
+            </button>
+            <button class="glass p-4 rounded-[1.5rem] text-left hover:bg-white transition-colors group">
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mb-2 text-purple-600 group-hover:scale-110 transition-transform"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+                <span class="text-sm font-bold text-gray-700">Fé</span>
+            </button>
+            <button class="glass p-4 rounded-[1.5rem] text-left hover:bg-white transition-colors group">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mb-2 text-green-600 group-hover:scale-110 transition-transform"><i data-lucide="heart" class="w-5 h-5"></i></div>
+                <span class="text-sm font-bold text-gray-700">Família</span>
+            </button>
+            <button class="glass p-4 rounded-[1.5rem] text-left hover:bg-white transition-colors group">
+                <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center mb-2 text-io-gold group-hover:scale-110 transition-transform"><i data-lucide="compass" class="w-5 h-5"></i></div>
+                <span class="text-sm font-bold text-gray-700">Metas</span>
+            </button>
         </div>
     </div>
 
-    <div class="col-span-1 lg:col-span-6 space-y-6">
+    <div class="col-span-1 lg:col-span-6 space-y-8">
         
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
-            <div class="flex gap-4">
-                <div class="w-10 h-10 rounded-full bg-gray-200"></div>
-                <input type="text" placeholder="O que você está vivendo agora?" class="w-full bg-transparent border-none focus:ring-0 text-gray-700 placeholder-gray-400">
-            </div>
-            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-50">
-                <div class="flex gap-2">
-                    <button class="text-gray-400 hover:text-io-blue"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></button>
+        <div class="flex gap-4 overflow-x-auto pb-4 hide-scroll snap-x">
+            <div class="snap-center flex-shrink-0 w-24 h-40 rounded-[2rem] border-2 border-dashed border-io-blue/30 flex flex-col items-center justify-center gap-2 cursor-pointer bg-white/50 hover:bg-white transition-all">
+                <div class="w-10 h-10 rounded-full bg-io-blue text-white flex items-center justify-center shadow-lg">
+                    <i data-lucide="plus" class="w-6 h-6"></i>
                 </div>
-                <button class="bg-io-blue text-white px-6 py-2 rounded-xl font-medium hover:bg-io-lightBlue transition-colors">Registrar</button>
+                <span class="text-xs font-bold text-io-blue">Add Now</span>
             </div>
+
+            {% for i in "12345" %}
+            <div class="snap-center flex-shrink-0 w-24 h-40 rounded-[2rem] relative overflow-hidden cursor-pointer group shadow-md hover:-translate-y-1 transition-transform">
+                <img src="https://source.unsplash.com/random/200x350?person,{{i}}" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute bottom-3 left-0 right-0 text-center">
+                    <p class="text-white text-[10px] font-bold drop-shadow-md">User {{i}}</p>
+                </div>
+                <div class="absolute top-2 right-2 w-6 h-6 rounded-full border border-white p-0.5 bg-white/20 backdrop-blur-sm">
+                     <img src="https://i.pravatar.cc/100?img={{ forloop.counter|add:10 }}" class="w-full h-full rounded-full">
+                </div>
+            </div>
+            {% endfor %}
         </div>
 
-        {% for log in logs %}
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div class="p-4 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gray-200"></div>
+        <article class="glass rounded-[2.5rem] overflow-hidden shadow-card hover:shadow-2xl transition-shadow duration-500">
+            <div class="p-5 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <img src="https://i.pravatar.cc/150?img=32" class="w-12 h-12 rounded-2xl object-cover border border-white shadow-sm">
+                        <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-io-dark">Sophia Mind</h4>
+                        <p class="text-xs text-gray-500">São Paulo, BR • 2h atrás</p>
+                    </div>
+                </div>
+                <button class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-400"><i data-lucide="more-vertical" class="w-5 h-5"></i></button>
+            </div>
+
+            <div class="relative w-full h-[500px] group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&fit=crop" class="w-full h-full object-cover">
+                
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6">
+                    <button class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:scale-110 transition-transform"><i data-lucide="heart" class="w-7 h-7 fill-current"></i></button>
+                    <button class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:scale-110 transition-transform"><i data-lucide="message-circle" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+
+            <div class="p-5">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex -space-x-2">
+                        <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1">
+                        <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2">
+                        <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3">
+                        <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-[10px] font-bold text-gray-600">+42</div>
+                    </div>
+                    <div class="flex gap-4">
+                        <button class="text-gray-500 hover:text-red-500 transition-colors"><i data-lucide="heart" class="w-6 h-6"></i></button>
+                        <button class="text-gray-500 hover:text-io-blue transition-colors"><i data-lucide="message-circle" class="w-6 h-6"></i></button>
+                        <button class="text-gray-500 hover:text-io-gold transition-colors"><i data-lucide="bookmark" class="w-6 h-6"></i></button>
+                    </div>
+                </div>
+                <p class="text-gray-800"><span class="font-bold mr-2">Sophia Mind</span>Finalmente encontrei o equilíbrio entre trabalho e vida pessoal. A jornada é longa, mas a vista vale a pena. 🌄 #VidaReal #IOFlow</p>
+            </div>
+        </article>
+
+        <article class="glass rounded-[2.5rem] overflow-hidden shadow-card hover:shadow-2xl transition-shadow">
+            <div class="p-5 flex items-center gap-3">
+                <img src="https://i.pravatar.cc/150?img=60" class="w-10 h-10 rounded-2xl object-cover">
                 <div>
-                    <h4 class="font-bold text-io-blue">{{ log.author.username }}</h4>
-                    <p class="text-xs text-gray-400">{{ log.created_at|date:"d M, Y" }} em <span class="text-io-gold font-medium uppercase">{{ log.get_area_display }}</span></p>
+                    <h4 class="font-bold text-sm">Pedro Alvares</h4>
+                    <p class="text-[10px] uppercase tracking-wide text-io-blue">Reflexão • Fé</p>
                 </div>
             </div>
             
-            {% if log.image %}
-            <div class="w-full h-64 bg-gray-100 overflow-hidden">
-                <img src="{{ log.image.url }}" class="w-full h-full object-cover">
-            </div>
-            {% endif %}
-
-            <div class="p-4">
-                <p class="text-gray-700 leading-relaxed">{{ log.content }}</p>
+            <div class="h-64 bg-gradient-to-br from-io-blue to-[#002a60] p-8 flex items-center justify-center text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <p class="text-white font-serif text-2xl italic leading-relaxed z-10">"O sucesso não é o final, o fracasso não é fatal: é a coragem de continuar que conta."</p>
             </div>
 
-            <div class="p-4 border-t border-gray-50 flex items-center justify-between text-gray-500">
-                <button class="flex items-center gap-2 hover:text-io-gold transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    <span>Val</span>
-                </button>
-                <button class="flex items-center gap-2 hover:text-io-blue transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                    <span>Echo</span>
-                </button>
+            <div class="p-4 flex justify-between items-center">
+                <p class="text-xs text-gray-400 uppercase font-bold">234 Reações</p>
+                <div class="flex gap-4 text-gray-400">
+                    <i data-lucide="heart" class="w-5 h-5 hover:text-red-500 cursor-pointer"></i>
+                    <i data-lucide="share-2" class="w-5 h-5 hover:text-green-500 cursor-pointer"></i>
+                </div>
             </div>
-        </div>
-        {% empty %}
-        <div class="text-center py-12 text-gray-400">
-            <p>O Flow está silencioso... Comece a viver e registrar.</p>
-        </div>
-        {% endfor %}
+        </article>
 
     </div>
 
     <div class="hidden lg:block lg:col-span-3 space-y-6">
-        <div class="bg-gradient-to-br from-io-blue to-black rounded-2xl shadow-lg p-6 text-white">
-            <h3 class="font-bold text-io-gold mb-2">Consciência Diária</h3>
-            <p class="text-sm text-gray-300 mb-4">Como está seu equilíbrio hoje?</p>
-            <div class="h-2 bg-white/20 rounded-full overflow-hidden">
-                <div class="h-full bg-io-gold w-3/4"></div>
+        
+        <div class="glass rounded-[2rem] p-6">
+            <h3 class="font-bold text-lg text-io-dark mb-4 flex items-center gap-2">
+                <i data-lucide="flame" class="w-5 h-5 text-orange-500"></i> Em Alta
+            </h3>
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🚀</div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-800 group-hover:text-io-blue">Startups BR</p>
+                        <p class="text-xs text-gray-500">15 novos posts</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🧘</div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-800 group-hover:text-io-blue">Mindfulness</p>
+                        <p class="text-xs text-gray-500">4 eventos hoje</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📸</div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-800 group-hover:text-io-blue">Fotografia</p>
+                        <p class="text-xs text-gray-500">Desafio da semana</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-xs text-right mt-1 text-io-gold">75% Equilibrado</p>
         </div>
+
+        <div class="rounded-[2rem] p-6 bg-gradient-to-br from-io-gold to-yellow-600 text-white relative overflow-hidden shadow-lg">
+            <div class="relative z-10">
+                <h3 class="font-serif text-xl font-bold mb-2">Torne-se Gold</h3>
+                <p class="text-white/80 text-sm mb-4">Acesse métricas avançadas e conecte-se com mentores.</p>
+                <button class="bg-white text-io-gold px-4 py-2 rounded-xl text-sm font-bold hover:bg-gray-50 transition-colors shadow-md">Ver planos</button>
+            </div>
+            <i data-lucide="crown" class="absolute -bottom-4 -right-4 w-32 h-32 text-white/10 rotate-12"></i>
+        </div>
+
     </div>
 
 </div>

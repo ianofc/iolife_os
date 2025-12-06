@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="h-[calc(100vh-140px)] max-h-[800px] pt-4">
+    <div class="bg-white rounded-[2rem] shadow-card border border-slate-100 h-full overflow-hidden flex">
+        
+        <div class="w-full md:w-80 lg:w-96 border-r border-slate-100 flex flex-col bg-white">
+            
+            <div class="p-6 pb-2">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="font-heading font-bold text-2xl text-io-dark">Mensagens</h2>
+                    <button class="w-10 h-10 rounded-full bg-slate-50 text-io-blue flex items-center justify-center hover:bg-io-blue hover:text-white transition-all">
+                        <i data-lucide="edit" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <div class="relative">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4"></i>
+                    <input type="text" placeholder="Pesquisar..." class="w-full bg-slate-50 rounded-2xl pl-10 pr-4 py-3 text-sm border-none focus:ring-2 focus:ring-io-blue/20 outline-none transition-all placeholder-slate-400">
+                </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto hide-scroll p-3 space-y-1">
+                {% for i in "12345" %}
+                <div class="flex items-center gap-4 p-3 rounded-2xl hover:bg-slate-50 cursor-pointer transition-colors group {% if forloop.first %}bg-io-blue/5{% endif %}">
+                    <div class="relative">
+                        <img src="https://i.pravatar.cc/150?img={{ forloop.counter|add:10 }}" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-bold text-sm text-io-dark group-hover:text-io-blue transition-colors">Nome do Usuário</h4>
+                            <span class="text-[10px] text-slate-400 font-medium">10:42</span>
+                        </div>
+                        <p class="text-xs text-slate-500 truncate group-hover:text-slate-600">Ei, vamos marcar aquele café hoje?</p>
+                    </div>
+                    {% if forloop.first %}
+                    <div class="w-5 h-5 bg-io-blue rounded-full flex items-center justify-center text-[10px] font-bold text-white">2</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="hidden md:flex flex-1 flex-col bg-[#F8FAFC]">
+            
+            <div class="h-20 bg-white border-b border-slate-100 flex items-center justify-between px-6">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <img src="https://i.pravatar.cc/150?img=11" class="w-10 h-10 rounded-full object-cover">
+                        <div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-io-dark">Nome do Usuário</h3>
+                        <p class="text-xs text-green-600 font-medium flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Online agora
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button class="p-2 text-slate-400 hover:text-io-blue hover:bg-slate-50 rounded-xl transition-colors"><i data-lucide="phone" class="w-5 h-5"></i></button>
+                    <button class="p-2 text-slate-400 hover:text-io-blue hover:bg-slate-50 rounded-xl transition-colors"><i data-lucide="video" class="w-5 h-5"></i></button>
+                    <button class="p-2 text-slate-400 hover:text-io-blue hover:bg-slate-50 rounded-xl transition-colors"><i data-lucide="info" class="w-5 h-5"></i></button>
+                </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-6 space-y-6">
+                <div class="text-center text-xs text-slate-400 my-4 uppercase tracking-wider font-medium">Hoje, 10:30</div>
+
+                <div class="flex gap-4 max-w-[80%]">
+                    <img src="https://i.pravatar.cc/150?img=11" class="w-8 h-8 rounded-full object-cover mt-auto">
+                    <div class="bg-white p-4 rounded-2xl rounded-bl-none shadow-sm text-slate-600 text-sm leading-relaxed border border-slate-100">
+                        <p>Oi! Vi que você postou sobre aquela viagem. Ficou incrível!</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 max-w-[80%] ml-auto flex-row-reverse">
+                    <div class="bg-io-blue p-4 rounded-2xl rounded-br-none shadow-md text-white text-sm leading-relaxed">
+                        <p>Obrigado! Foi uma experiência transformadora mesmo. Recomendo muito.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4 max-w-[80%]">
+                    <img src="https://i.pravatar.cc/150?img=11" class="w-8 h-8 rounded-full object-cover mt-auto">
+                    <div class="bg-white p-4 rounded-2xl rounded-bl-none shadow-sm text-slate-600 text-sm leading-relaxed border border-slate-100">
+                        <p>Vamos marcar de conversar sobre isso?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-white m-4 rounded-[1.5rem] shadow-lg border border-slate-100 flex items-center gap-3">
+                <button class="p-2 text-slate-400 hover:text-io-blue"><i data-lucide="plus" class="w-6 h-6"></i></button>
+                <input type="text" placeholder="Digite sua mensagem..." class="flex-1 bg-transparent border-none outline-none text-slate-700 placeholder-slate-400">
+                <button class="p-2 text-slate-400 hover:text-io-blue"><i data-lucide="smile" class="w-6 h-6"></i></button>
+                <button class="p-3 bg-io-blue text-white rounded-xl hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

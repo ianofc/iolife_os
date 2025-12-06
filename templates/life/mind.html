@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto space-y-6 pb-20">
+    <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600">
+            <i data-lucide="brain" class="w-6 h-6"></i>
+        </div>
+        <div>
+            <h1 class="text-2xl font-bold text-io-dark">Mente</h1>
+            <p class="text-sm text-gray-500">Clareza, foco e equilíbrio.</p>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-[2.5rem] p-8 text-white relative overflow-hidden shadow-lg">
+        <div class="relative z-10">
+            <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded-lg uppercase tracking-wider">Sessão do Dia</span>
+            <h2 class="text-3xl font-heading font-bold mt-2 mb-4">Foco Profundo</h2>
+            <div class="flex items-center gap-4">
+                <button class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-600 shadow-lg hover:scale-110 transition-transform">
+                    <i data-lucide="play" class="w-5 h-5 ml-1"></i>
+                </button>
+                <span class="text-sm font-medium opacity-90">15 minutos</span>
+            </div>
+        </div>
+        <i data-lucide="wind" class="absolute -right-6 -bottom-6 w-48 h-48 text-white/10"></i>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded-[2rem] shadow-card border border-gray-100 hover:shadow-lg transition-all cursor-pointer group">
+            <i data-lucide="moon" class="w-8 h-8 text-indigo-500 mb-3 group-hover:scale-110 transition-transform"></i>
+            <h3 class="font-bold text-gray-800">Sono</h3>
+            <p class="text-xs text-gray-400 mt-1">Monitorar qualidade</p>
+        </div>
+        <div class="bg-white p-6 rounded-[2rem] shadow-card border border-gray-100 hover:shadow-lg transition-all cursor-pointer group">
+            <i data-lucide="zap" class="w-8 h-8 text-amber-500 mb-3 group-hover:scale-110 transition-transform"></i>
+            <h3 class="font-bold text-gray-800">Energia</h3>
+            <p class="text-xs text-gray-400 mt-1">Nível atual: 85%</p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-[2rem] p-6 border border-gray-100 shadow-sm flex items-center gap-4">
+        <div class="w-14 h-14 bg-gradient-to-tr from-io-blue to-purple-500 rounded-full flex items-center justify-center text-white shadow-md">
+            <i data-lucide="bot" class="w-7 h-7"></i>
+        </div>
+        <div class="flex-1">
+            <p class="text-sm font-bold text-gray-900">Coach Mental IA</p>
+            <p class="text-xs text-gray-500">"Estou aqui se precisar conversar sobre sua ansiedade."</p>
+        </div>
+        <button class="px-4 py-2 bg-slate-100 text-slate-600 text-xs font-bold rounded-xl hover:bg-slate-200">Chat</button>
+    </div>
+</div>
+{% endblock %}
